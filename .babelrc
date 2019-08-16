@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": 74
+        },
+        "ignoreBrowserslistConfig": true,
+        "useBuiltIns": false,
+        "modules": false,
+        "exclude": [
+          "transform-typeof-symbol"
+        ]
+      }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "targets": "last 2 versions, ie 11",
+        "modules": false
+      }
+    ]
+  ]
+}

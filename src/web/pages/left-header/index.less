@@ -1,0 +1,101 @@
+@import "../../assets/commonstyle/utils";
+
+.header-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 18px;
+  background-color: #fff;
+  border-bottom: 1px solid @border;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+
+  .myInfo {
+    visibility: hidden;
+    display: inline-block;
+  }
+
+  .add {
+    font-size: 22px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .dialogRender {
+    /*在IE10+浏览器中, 使用css即可隐藏input文本输入框右侧的叉号*/
+
+    ::-ms-reveal,
+    input[type=text]::-ms-clear {
+      display: none;
+    }
+
+    ::-ms-reveal,
+    input::-ms-clear {
+      display: none;
+    }
+  }
+
+  .groupModalContent {
+    font-size: 22px;
+    margin-top: 20px;
+    text-align: center;
+
+    div {
+      text-align: left;
+      font-size: 0;
+
+      input, textarea {
+        font-size: 14px;
+        outline: none;
+        resize: none;
+        padding-left: 10px;
+        border: 1px solid #fff;
+        color: #999;
+        width: 70%;
+        line-height: 20px;
+        box-sizing: border-box;
+      }
+
+      span {
+        left: 10px;
+        text-align: right;
+        float: left;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 2px;
+        width: 30%;
+      }
+
+      textarea {
+        padding-top: 4px;
+        width: 70%;
+      }
+
+      input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+        /* WebKit browsers */
+        // font-size: 0.24rem;
+        color: #cccccc;
+      }
+
+      input:-moz-placeholder, textarea:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        // font-size: 0.24rem;
+        color: #cccccc;
+      }
+
+      input::-moz-placeholder, textarea::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        // font-size: 0.24rem;
+        color: #cccccc;
+      }
+
+      input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: #cccccc;
+      }
+    }
+  }
+}
